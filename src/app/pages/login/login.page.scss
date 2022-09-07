@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+.encabezado {
+    
+    margin-top: 50px;
+
+    h1 {
+        font-size: 1.6rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+    }
+
+    p {
+        color: #ff9e0d;
+        font-weight: bold;
+        font-style: oblique
+    }
+
+}
+
+.login-form {
+    
+    .form-input {
+        position: relative;
+        margin-bottom: 12px;
+        border-color: red;
+        
+        ion-label {
+            position: absolute;
+            top: 3px;
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        ion-item {
+            //--highlight-color-focused: #FFBB0D;  // color del borde al hacer click
+            --border-color: rgb(201, 186, 186); // color del borde
+            --highlight-color-invalid: red; // color del borde si existe un formulario y es invalido
+            --highlight-color-valid: green; // same, pero cuando es valido.
+        }
+
+        ion-icon {
+            position: relative;
+            top: 12px;
+        }
+
+        
+        ion-input {
+            font-size: 0.9rem;
+            --padding-top: 35px;
+        }
+    }
+}
+
+.restablecer-pass p {
+    color: #ff9e0d;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+p:hover {
+    color: #666;
+}
+
+
+.botones {
+
+    .btnLogin {
+        --background:  #ff9e0d;
+        width: 100%;
+        color: #eee;
+    }
+
+    .btnLogin:hover {
+        --background:  #e0e416;
+        color: #fff;
+    }
+
+    .btnRegistro {
+        --background: black;
+        color:  #FFBB0D;
+        width: 100%;
+    }
+}

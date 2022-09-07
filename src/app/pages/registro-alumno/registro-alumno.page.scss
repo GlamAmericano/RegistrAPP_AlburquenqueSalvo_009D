@@ -1,0 +1,42 @@
+
+.encabezado {
+    
+    h1 {
+        font-size: 1.6rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+    }
+
+
+}
+
+.boton {
+    ion-button {
+        --background:  #ff9e0d;
+        width: 100%;
+        color: #eee;
+    }
+
+    ion-item {
+        //--highlight-color-focused: #FFBB0D;  // color del borde al hacer click
+        --border-color: rgb(201, 186, 186); // color del borde
+        --highlight-color-invalid: red; // color del borde si existe un formulario y es invalido
+        --highlight-color-valid: yellow; // same, pero cuando es valido.
+    }
+
+}
+
+.tieneCuenta {
+    margin-bottom: 30px;
+
+    p {
+        font-size: 12px;
+    }
+
+    a {
+        color: #ff9e0d;
+        font-size: 12px;
+        text-decoration: none;
+    }
+    
+}

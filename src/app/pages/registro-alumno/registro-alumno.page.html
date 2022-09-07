@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="login-container ion-padding">
+    <div class="encabezado">
+      <h1>Completa tu registro como estudiante!</h1>
+    </div>
+    
+
+    
+
+    <form #formulario="ngForm" (ngSubmit)="onSubmitTemplate">
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Nombres</ion-label>
+          <ion-input type="text" name="nombres" [(ngModel)]="usuario.nombres" required></ion-input>
+        </ion-item>  
+        <ion-item>
+          <ion-label position="floating">Apellidos</ion-label>
+          <ion-input type="text" name="apellidos" [(ngModel)]="usuario.apellidos" required ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Carrera</ion-label>
+          <ion-input type="text" name="carrera" [(ngModel)]="usuario.carrera" required ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Correo Electrónico</ion-label>
+          <ion-input type="email" name="email" [(ngModel)]="usuario.email" required ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" name="password" [(ngModel)]="usuario.password" required ></ion-input>
+        </ion-item>
+        
+      </ion-list>
+        
+
+
+      <div class="boton">
+        <ion-button size="small" expand="full" type="submit" [disabled]="formulario.invalid" routerLink="/home"> Completar Registro </ion-button>
+      </div>
+
+      <div class="tieneCuenta">
+        <p>¿Ya tienes una cuenta? <a routerLink="/login">Inicia Sesión</a> </p>
+      </div>
+
+    </form>
+
+  
+  </div>
+  
+</ion-content>

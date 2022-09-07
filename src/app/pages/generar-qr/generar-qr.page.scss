@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+h1{
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+ion-thumbnail {
+    --size: 250px;
+    position: relative;
+    bottom: 8px;
+    left: 16px;
+    display: flex;
+  }

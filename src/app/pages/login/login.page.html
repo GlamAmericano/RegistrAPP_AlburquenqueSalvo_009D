@@ -1,0 +1,44 @@
+
+<ion-content>
+
+  <div class="login-container ion-padding">
+
+    <div class="encabezado">
+      <h1>Inicia sesión en RegistrAPP!</h1>
+      <p>Ingrese sus credenciales para continuar</p>
+    </div>
+    
+    
+    <div class="login-form ion-padding">
+
+      <div class="form-input">
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" ([ngModel])="user.email" ></ion-input>
+        </ion-item>
+      </div>   
+
+      <div class="form-input">
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" ([ngModel])="user.password"></ion-input>
+          <ion-icon slot="end" name="eye" color="gray" (click)="togglePassword()"></ion-icon>
+        </ion-item>
+      
+      
+      <div class="restablecer-pass">
+        <p routerLink="/registro">He olvidado mi contraseña</p>
+      </div>
+
+      </div>
+
+    </div>
+
+    <div class="botones">
+      <ion-button size="small" (click)="submit()" class="btnLogin" routerLink="/home">Iniciar Sesión</ion-button>
+      <ion-button size="small" class="btnRegistro" routerLink="/registro">Regístrate</ion-button>
+
+    </div>
+  </div>
+
+</ion-content>

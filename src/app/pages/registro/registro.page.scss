@@ -1,0 +1,51 @@
+
+.encabezado {
+    
+    h1 {
+        font-size: 1.6rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+    }
+
+
+}
+
+.login-container {
+    ion-label {
+        top: 3px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    ion-item {
+        --border-color: rgb(201, 186, 186); // color del borde
+        --highlight-color-invalid: red; // color del borde si existe un formulario y es invalido
+        --highlight-color-valid: yellow; // same, pero cuando es valido.
+    }
+
+    ion-input {
+        font-size: 0.9rem;
+    }
+}
+
+.boton {
+    ion-button {
+        --background:  #ff9e0d;
+        width: 100%;
+        color: #eee;
+    }
+}
+
+.tieneCuenta {
+    margin-bottom: 30px;
+
+    p {
+        font-size: 12px;
+    }
+
+    a {
+        color: #ff9e0d;
+        font-size: 12px;
+        text-decoration: none;
+    }
+    
+}
