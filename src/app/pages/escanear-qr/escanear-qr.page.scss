@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+ion-title {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 25px;
+
+}
+
+
+ion-toolbar {
+    --background: #ff9e0d;
+    color: #eee;
+    border: none;
+    padding: 5px;
+}
 
 .texto{
     p {
@@ -10,8 +23,19 @@
 }
 
 .rectangulo {
-    position: absolute;
     width: 100%;
     height: 350px;
     background-color: #0B0909;
+}
+
+.btn {
+    text-align: center;
+    
+    ion-button{
+        text-transform: none;
+        font-size: 16px;
+        height: 50px;
+        --background: #ff9e0d;
+    }
+
 }

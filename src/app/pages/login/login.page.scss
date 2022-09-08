@@ -1,9 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+ion-title {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 25px;
+
+}
+
+
+ion-title {
+    color: black;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 25px;
+
+}
+
+
+ion-toolbar {
+    --background: #ff9e0d;
+    color: #eee;
+    border: none;
+    padding: 5px;
+}
 
 .encabezado {
-    
-    margin-top: 50px;
+    margin-left: 15px;
 
     h1 {
         font-size: 1.6rem;
@@ -55,8 +75,8 @@
 
 .restablecer-pass p {
     color: #ff9e0d;
-    margin-bottom: 5px;
     font-size: 12px;
+    margin-top: 10px;
 }
 
 p:hover {

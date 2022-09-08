@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'bienvenida',
+    redirectTo: 'escanear-qr',
     pathMatch: 'full'
   },
   {
@@ -42,6 +42,26 @@ const routes: Routes = [
   {
     path: 'tipo-registro',
     loadChildren: () => import('./pages/tipo-registro/tipo-registro.module').then( m => m.TipoRegistroPageModule)
+  },
+  {
+    path: 'recuperar',
+    loadChildren: () => import('./pages/recuperar/recuperar.module').then( m => m.RecuperarPageModule)
+  },
+  {
+    path: 'codigo-recuperacion',
+    loadChildren: () => import('./pages/codigo-recuperacion/codigo-recuperacion.module').then( m => m.CodigoRecuperacionPageModule)
+  },
+  {
+    path: 'nuevo-password',
+    loadChildren: () => import('./pages/nuevo-password/nuevo-password.module').then( m => m.NuevoPasswordPageModule)
+  },
+  {
+    path: 'home-docente',
+    loadChildren: () => import('./pages/home-docente/home-docente.module').then( m => m.HomeDocentePageModule)
+  },
+  {
+    path: 'justificar',
+    loadChildren: () => import('./pages/justificar/justificar.module').then( m => m.JustificarPageModule)
   },
 ];
 

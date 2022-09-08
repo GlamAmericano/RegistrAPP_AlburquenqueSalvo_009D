@@ -1,0 +1,33 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button routerLink="/tipo-registro"></ion-back-button>
+    </ion-buttons>
+    <ion-title>RegistrAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="encabezado">
+    <h1>Recuperar contraseña</h1>
+    <p>Ingresa tu dirección de correo electrónico. Te enviaremos en breve un código a tu correo para que recuperes tu contraseña.</p>
+  </div>
+
+  <ion-avatar>
+    <img alt="Avatar de estudiante" src="assets/mail.png" />
+  </ion-avatar>
+
+  <form #formulario="ngForm" (ngSubmit)="onSubmitTemplate">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input type="email" name="email" [(ngModel)]="usuario.email" required ></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="boton">
+      <ion-button size="small" expand="full" type="submit" [disabled]="formulario.invalid" routerLink="/codigo-recuperacion"> Enviar correo </ion-button>
+    </div>
+  </form>
+
+</ion-content>

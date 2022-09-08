@@ -1,6 +1,9 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
-    <ion-title>registro</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button routerLink="/tipo-registro"></ion-back-button>
+    </ion-buttons>
+    <ion-title>RegistrAPP</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,8 +13,6 @@
     <div class="encabezado">
       <h1>Completa tu registro como docente!</h1>
     </div>
-    
-
     
 
     <form #formulario="ngForm" (ngSubmit)="onSubmitTemplate">
@@ -29,6 +30,21 @@
           <ion-input type="email" name="email" [(ngModel)]="usuario.email" required ></ion-input>
         </ion-item>
         <ion-item>
+          <ion-label position="floating">Escuela: </ion-label>
+          <ion-select>
+            <ion-select-option>Administración y Negocios</ion-select-option>
+            <ion-select-option>Auditoría</ion-select-option>
+            <ion-select-option>Comunicación</ion-select-option>
+            <ion-select-option>Construcción</ion-select-option>
+            <ion-select-option>Diseño</ion-select-option>
+            <ion-select-option>Gastronomía</ion-select-option>
+            <ion-select-option>Informática y Telecomunicaciones</ion-select-option>
+            <ion-select-option>Ingeniería y Recursos Naturales</ion-select-option>
+            <ion-select-option>Salud</ion-select-option>
+            <ion-select-option>Turismo y Hotelería</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
           <ion-label position="floating">Contraseña</ion-label>
           <ion-input type="password" name="password" [(ngModel)]="usuario.password" required ></ion-input>
         </ion-item>
@@ -38,7 +54,7 @@
 
 
       <div class="boton">
-        <ion-button size="small" expand="full" type="submit" [disabled]="formulario.invalid" routerLink="/home"> Completar Registro </ion-button>
+        <ion-button (click)="cuentaCreada()" size="small" expand="full" type="submit" [disabled]="formulario.invalid" routerLink="/home-docente"> Completar Registro </ion-button>
       </div>
 
       <div class="tieneCuenta">

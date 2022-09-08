@@ -1,6 +1,9 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
-    <ion-title>escanear-qr</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button routerLink="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>RegistrAPP</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,8 +12,16 @@
     <p>Posiciona el código QR en el espacio indicado</p>
   </div>
 
+
   <div class="rectangulo">
-    .
+    <p>.</p>
   </div>
+
+  
+
+  <div class="btn">
+    <ion-button (click)="codigoEscaneado('top')" routerLink="/home">Escaneando...</ion-button>
+  </div>
+  
 
 </ion-content>

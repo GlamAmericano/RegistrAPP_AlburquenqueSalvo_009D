@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+ion-title {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 25px;
+
+}
+
+ion-toolbar {
+    --background: #ff9e0d;
+    color: #eee;
+    border: none;
+    padding: 5px;
+}
+
 
 .encabezado {
     
@@ -17,12 +32,7 @@
         color: #eee;
     }
 
-    ion-item {
-        //--highlight-color-focused: #FFBB0D;  // color del borde al hacer click
-        --border-color: rgb(201, 186, 186); // color del borde
-        --highlight-color-invalid: red; // color del borde si existe un formulario y es invalido
-        --highlight-color-valid: yellow; // same, pero cuando es valido.
-    }
+
 
 }
 

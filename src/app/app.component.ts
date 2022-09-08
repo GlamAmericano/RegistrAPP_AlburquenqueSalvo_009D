@@ -19,7 +19,7 @@ export class AppComponent {
     {
       icon: 'home',
       nombre: 'Inicio',
-      redirectTo: '/home'
+      redirectTo: 'no'
     },
     {
       icon: 'people-outline',
@@ -27,14 +27,9 @@ export class AppComponent {
       redirectTo: '/nosotros'
     },
     {
-      icon: 'scan-outline',
-      nombre: 'Escanear Código',
-      redirectTo: '/escanear-qr'
-    },
-    {
       icon: 'hammer-outline',
       nombre: 'Ajustes',
-      redirectTo: ''
+      redirectTo: 'no'
     },
     {
       icon: 'log-out-outline',

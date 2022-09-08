@@ -1,44 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button routerLink="/tipo-registro"></ion-back-button>
+    </ion-buttons>
+    <ion-title>RegistrAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 
 <ion-content>
 
-  <div class="login-container ion-padding">
+  <div class="encabezado">
+    <h1>Inicia sesión en RegistrAPP!</h1>
+    <p>Ingrese sus credenciales para continuar</p>
+  </div>
+  
+  
+  <div class="login-form ion-padding">
 
-    <div class="encabezado">
-      <h1>Inicia sesión en RegistrAPP!</h1>
-      <p>Ingrese sus credenciales para continuar</p>
-    </div>
-    
-    
-    <div class="login-form ion-padding">
-
-      <div class="form-input">
+    <form #formulario="ngForm" (ngSubmit)="onSubmitTemplate">
+      <ion-list>
         <ion-item>
           <ion-label position="floating">Email</ion-label>
-          <ion-input type="email" ([ngModel])="user.email" ></ion-input>
+          <ion-input type="email" name="email" [(ngModel)]="usuario.email" required ></ion-input>
         </ion-item>
-      </div>   
-
-      <div class="form-input">
         <ion-item>
           <ion-label position="floating">Contraseña</ion-label>
-          <ion-input type="password" ([ngModel])="user.password"></ion-input>
-          <ion-icon slot="end" name="eye" color="gray" (click)="togglePassword()"></ion-icon>
+          <ion-input type="password" name="password" [(ngModel)]="usuario.password" required ></ion-input>
         </ion-item>
-      
-      
+      </ion-list>
+
       <div class="restablecer-pass">
-        <p routerLink="/registro">He olvidado mi contraseña</p>
+        <p routerLink="/recuperar">He olvidado mi contraseña</p>
       </div>
 
+  
+      <div class="botones">
+        <ion-button size="small" [disabled]="formulario.invalid" type="submit" class="btnLogin" routerLink="/home">Iniciar Sesión</ion-button>
+        <ion-button size="small" class="btnRegistro" routerLink="/tipo-registro">Regístrate</ion-button>
       </div>
+    </form>
 
-    </div>
 
-    <div class="botones">
-      <ion-button size="small" (click)="submit()" class="btnLogin" routerLink="/home">Iniciar Sesión</ion-button>
-      <ion-button size="small" class="btnRegistro" routerLink="/registro">Regístrate</ion-button>
-
-    </div>
   </div>
+
+
 
 </ion-content>

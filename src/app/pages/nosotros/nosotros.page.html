@@ -1,52 +1,70 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button (click)="mostrarMenu()">
-        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
-      </ion-button>
+        <ion-back-button routerLink="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title>Nosotros</ion-title>
+    <ion-title>RegistrAPP</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
-
 <ion-content>
 
-  <ion-card mode="ios">
-    <img src="" alt="Nosotros">
-    <ion-card-header>
-      <ion-card-title>¿Quiénes Somos?</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>RegistrAPP es una aplicación de escaneo de código QR simple, eficiente y directa, la cual registra 
-      la asistencia con su día y hora correspondiente</p>
-    </ion-card-content>
-  </ion-card>
+  <div class="encabezado">
+    <h1>¿Quiénes Somos?</h1>
+    <p>En este apartado encontrarás información que te puede ser relevante para conocer más acerca 
+      de nuestro ecosistema. 
+    </p>
+  </div>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col size-xs="12" size-md="6">
-        <ion-card>
-          <ion-card-title>¿Cómo nació RegistrAPP?</ion-card-title>
-          <p>RegistrAPP nace como una iniciativa de caridad debido a
-             las dificultades que puede tener el docente a la hora de registrar asistencia a sus alumnos por distintos **motivos**.
-          </p>
-        </ion-card>
-      </ion-col>
-      <ion-col size-xs="12" size-md="6">
-        <ion-card>
-          <ion-card-title>¿Cómo utilizar la aplicación?</ion-card-title>
-          <p>
-            En RegistrAPP basta con que el docente inicie sesión y genere el código QR 
-            una vez para que los alumnos a través de la misma app y con su respectiva cuenta
-            activen el escaner que trae esta misma y registren su asistencia para así ambos quitarse
-            ese peso de encima.
-          </p>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <img src="assets/somos.png" alt="Imagen Resumen">
+
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header">
+        <ion-label>¿Qué es RegistrAPP?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        RegistrAPP es una aplicación de escaneo de código QR simple, eficiente y directa, la cual registra 
+        la asistencia con su día y hora correspondiente.
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header">
+        <ion-label>¿Cómo nació la idea?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        RegistrAPP nace como una iniciativa de caridad debido a
+        las dificultades que puede tener el docente a la hora de registrar asistencia a sus alumnos por distintos motivos
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header">
+        <ion-label>¿Cuáles son esos motivos?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ol>
+          <li>Realización de múltiples tareas de parte del docente en la sala de clases.</li>
+          <li>Falta de tiempo adecuado para el registro.</li>
+          <li>Confusión en el registro de los alumnos debido al no poder reconocer visualmente a los alumnos a causa de las mascarillas.</li>
+          <li>Olvido por parte del docente de realizar esta actividad.</li>
+        </ol>
+      </div>
+    </ion-accordion>
+
+    <ion-accordion value="four">
+      <ion-item slot="header">
+        <ion-label>¿Cómo utilizar la aplicación?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        En RegistrAPP basta con que el docente inicie sesión y genere el código QR 
+        una vez para que los alumnos a través de la misma app y con su respectiva cuenta
+        activen el escaner que trae esta misma y registren su asistencia para así ambos quitarse
+        ese peso de encima.
+      </div>
+    </ion-accordion>
+
+  </ion-accordion-group>
 
 
 

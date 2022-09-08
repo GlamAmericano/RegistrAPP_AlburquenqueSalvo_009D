@@ -1,0 +1,32 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button routerLink="/tipo-registro"></ion-back-button>
+    </ion-buttons>
+    <ion-title>RegistrAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="encabezado">
+    <h1>Revisa tu correo electrónico</h1>
+    <p>Ingresa el código de verificación que recibiste para que puedas restablecer la contraseña de tu cuenta.</p>
+  </div>
+
+
+  <form #formulario="ngForm" (ngSubmit)="onSubmitTemplate">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Código</ion-label>
+        <ion-input type="email" name="codigo" [(ngModel)]="usuario.codigo" required ></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="boton">
+      <ion-button size="small" expand="full" type="submit" [disabled]="formulario.invalid" routerLink="/nuevo-password"> Verificar </ion-button>
+    </div>
+  </form>
+
+
+
+</ion-content>

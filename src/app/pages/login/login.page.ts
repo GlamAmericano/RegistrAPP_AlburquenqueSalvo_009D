@@ -8,6 +8,11 @@ import { MenuController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
+  usuario = {
+    email : '',
+    password : ''
+  }
+
 
   constructor(private menuController: MenuController) { }
 

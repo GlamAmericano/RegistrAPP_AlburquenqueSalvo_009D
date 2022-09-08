@@ -2,43 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap');
 
 
-.imagen {
-    text-align: center;
-    margin-top: 10vh;
-}
-
-.logo1 {
-    display: inline;
-    font-family: 'IBM Plex Sans Arabic', sans-serif;
-    color: #ff9e0d;
-    font-size: 1.6rem;
-}
-
-.logo2 {
-    display: inline;
-    color: #0de3ff;
-    font-family: 'IBM Plex Sans Arabic', sans-serif;
-    font-size: 1.8rem;
-}
 
 .texto {
+    
     text-align: center;
-    margin-top: 5vh;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+
+    .logo {
+        max-height: 250px;
+    }
+
+
+    h1{
+        font-size: 1.6rem;
+        font-weight: bolder;
+    }
+    p {
+        text-align: center;
+    }
+
 }
 
-h1{
-    font-size: 1.6rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-}
 
-p {
-    text-align: center;
-}
+
+
 
 .btn {
     text-align: center;
-    margin-top: 10vh;
     
     ion-button{
         text-transform: none;
