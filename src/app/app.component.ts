@@ -29,15 +29,21 @@ export class AppComponent {
     {
       icon: 'hammer-outline',
       nombre: 'Ajustes',
-      redirectTo: 'no'
+      redirectTo: 'ajustes'
     },
     {
       icon: 'log-out-outline',
       nombre: 'Cerrar Sesión',
       redirectTo: '/login'
+    },
+    {
+      icon: 'videocam-outline',
+      nombre: 'Cine',
+      redirectTo: '/api'
     }
-
   ]
+
+
 
 
 }
