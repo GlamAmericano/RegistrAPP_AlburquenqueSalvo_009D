@@ -12,12 +12,9 @@
   <div class="login-container ion-padding">
     <div class="encabezado">
       <h1>Completa tu registro como estudiante!</h1>
-    </div>
-    
+    </div>    
 
-    
-
-    <form #formulario="ngForm" (ngSubmit)="onSubmitTemplate">
+    <form #formulario="ngForm" (ngSubmit)="onSubmit()">
       <ion-list>
         <ion-item>
           <ion-label position="floating">Nombres</ion-label>
@@ -41,18 +38,20 @@
         </ion-item>
         
       </ion-list>
-        
 
-
-      <div class="boton">
-        <ion-button size="small" expand="full" type="submit" [disabled]="formulario.invalid" routerLink="/home"> Completar Registro </ion-button>
-      </div>
-
-      <div class="tieneCuenta">
-        <p>¿Ya tienes una cuenta? <a routerLink="/login">Inicia Sesión</a> </p>
-      </div>
 
     </form>
+
+            
+
+
+    <div class="boton">
+      <ion-button size="small" expand="full" type="submit" [disabled]="formulario.invalid" routerLink="/home"> Completar Registro </ion-button>
+    </div>
+
+    <div class="tieneCuenta">
+      <p>¿Ya tienes una cuenta? <a routerLink="/login">Inicia Sesión</a> </p>
+    </div>
 
   
   </div>
