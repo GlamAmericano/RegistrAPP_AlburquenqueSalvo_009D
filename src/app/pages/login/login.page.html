@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
     <ion-buttons slot="start">
         <ion-back-button routerLink="/tipo-registro"></ion-back-button>
@@ -7,42 +7,40 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content>
 
   <div class="encabezado">
     <h1>Inicia sesión en RegistrAPP!</h1>
     <p>Ingrese sus credenciales para continuar</p>
   </div>
-  
-  
-  <div class="login-form ion-padding">
 
-    <form #formulario="ngForm" (ngSubmit)="onSubmitTemplate">
-      <ion-list>
-        <ion-item>
-          <ion-label position="floating">Email</ion-label>
-          <ion-input type="email" name="email" [(ngModel)]="usuario.email" required ></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Contraseña</ion-label>
-          <ion-input type="password" name="password" [(ngModel)]="usuario.password" required ></ion-input>
-        </ion-item>
-      </ion-list>
+  <div class="login-container ion-padding">
+   
 
-      <div class="restablecer-pass">
-        <p routerLink="/recuperar">He olvidado mi contraseña</p>
-      </div>
+  <form [formGroup]="formularioLogin">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input type="email" formControlName="correo" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+     <br>
+     <div class="restablecer-pass">
+      <p routerLink="/recuperar">He olvidado mi contraseña</p>
+    </div>
 
-  
-      <div class="botones">
-        <ion-button size="small" [disabled]="formulario.invalid" type="submit" class="btnLogin" routerLink="/home">Iniciar Sesión</ion-button>
-        <ion-button size="small" class="btnRegistro" routerLink="/tipo-registro">Regístrate</ion-button>
-      </div>
-    </form>
+    <div class="botones">
+      <ion-button size="small" type="submit" class="btnLogin" (click)="Ingresar()"  >Iniciar Sesión</ion-button>
+      <ion-button size="small" class="btnRegistro" routerLink="/tipo-registro">Regístrate</ion-button>
+    </div>
 
+    </ion-list>
+  </form>
 
-  </div>
+</div>  
 
 
 
