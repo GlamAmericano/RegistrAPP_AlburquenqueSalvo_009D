@@ -32,11 +32,6 @@ export class AppComponent {
       redirectTo: 'ajustes'
     },
     {
-      icon: 'log-out-outline',
-      nombre: 'Cerrar Sesión',
-      redirectTo: '/login'
-    },
-    {
       icon: 'videocam-outline',
       nombre: 'Cine',
       redirectTo: '/api'
