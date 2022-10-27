@@ -11,10 +11,20 @@ export class HomeDocentePage implements OnInit {
   constructor(private menuCtrl: MenuController) { }
 
   ngOnInit() {
+    
   }
 
   mostrarMenu(){
     this.menuCtrl.open('first');
   }
+
+  nombre = localStorage.getItem('nombre');
+  apellidos = localStorage.getItem('apellidos');
+  escuela = localStorage.getItem('escuela');
+
+
+  
+
+ 
 
 }

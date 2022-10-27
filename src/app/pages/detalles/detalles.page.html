@@ -1,9 +1,9 @@
 <ion-header>
-  <ion-toolbar color="secondary">
+  <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/movies"></ion-back-button>
+      <ion-back-button defaultHref="/api"></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ movie?.title }}</ion-title>
+    <ion-title> RegistrAPP | Cine Duoc | {{ movie?.title }}</ion-title>
   </ion-toolbar>
 </ion-header>
  
@@ -37,6 +37,6 @@
 <ion-footer>
   <ion-button expand="full" (click)="openHomepage(movie.homepage)" *ngIf="movie?.homepage">
     <ion-icon name="open-outline" slot="start"></ion-icon>
-    Open Homepage
+    Ir a canjear
   </ion-button>
 </ion-footer>

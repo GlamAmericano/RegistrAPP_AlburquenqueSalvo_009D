@@ -1,10 +1,20 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Cine Duoc</ion-title>
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button routerLink="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>RegistrAPP | Cine Duoc</ion-title>
   </ion-toolbar>
 </ion-header>
+
  
 <ion-content>
+
+  <div class="encabezado">
+    <h1>En este apartado se muestran el catálogo de películas disponibles en nuestra institución a las cuales podrás acceder gratuitamente mediante puntos que ganarás al registrar tu asistencia.</h1>
+  </div>
+ 
+
   <ion-list>
     <ion-item button *ngFor="let item of movies" [routerLink]="[item.id]">
       <ion-avatar slot="start">
