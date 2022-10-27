@@ -6,7 +6,7 @@ import { Storage } from '@ionic/storage';
 export interface Estudiante {
   nombre: string;
   apellidos: string;
-  email: string;
+  correo: string;
   carrera: string;
   password: string;
 }
@@ -44,7 +44,7 @@ export class RegistroService {
   }
 
   //Obtener todos los estudiantes dentro del storage
-  getEstudiante():Promise<Estudiante[]>{
+  async getEstudiante():Promise<Estudiante[]>{
     return this.storage.get(USERS_KEY);
   }
 
