@@ -34,7 +34,6 @@ export class LoginPage implements OnInit {
   async Ingresar() {
     var f = this.formularioLogin.value;
     var a = false;
-    
     // INGRESO ESTUDIANTES
     this.registroService.getEstudiante().then(datos=>{ 
       this.estudiantes = datos; 

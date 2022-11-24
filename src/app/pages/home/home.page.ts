@@ -23,8 +23,12 @@ export class HomePage implements OnInit {
   apellidos = localStorage.getItem('apellidos');
   carrera = localStorage.getItem('carrera');
 
+
+
   mostrarMenu(){
+    this.menuCtrl.enable(true, 'first');
     this.menuCtrl.open('first');
+
   }
 
   

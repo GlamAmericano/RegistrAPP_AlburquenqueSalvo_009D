@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { InfiniteScrollCustomEvent, LoadingController } from '@ionic/angular';
+import { InfiniteScrollCustomEvent, LoadingController, MenuController } from '@ionic/angular';
 import { ApiService } from 'src/app/services/api.service';
 import { environment } from 'src/environments/environment';
 
@@ -16,10 +16,11 @@ export class ApiPage implements OnInit {
   imageBaseUrl = environment.images;
 
 
-  constructor(private apiService: ApiService, private loadingCtrl: LoadingController) { }
+  constructor(private apiService: ApiService, private loadingCtrl: LoadingController, private menuCtrl: MenuController) { }
 
   ngOnInit() {
     this.loadMovies();
+    this.menuCtrl.enable(false);
   }
 
   async loadMovies(event?: InfiniteScrollCustomEvent) {

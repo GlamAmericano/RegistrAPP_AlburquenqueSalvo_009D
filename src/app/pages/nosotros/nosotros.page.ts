@@ -11,10 +11,9 @@ export class NosotrosPage implements OnInit {
   constructor(private menuCtrl: MenuController) { }
 
   ngOnInit() {
+    this.menuCtrl.enable(false);
   }
 
-  mostrarMenu(){
-    this.menuCtrl.open('first');
-  }
+
 
 }

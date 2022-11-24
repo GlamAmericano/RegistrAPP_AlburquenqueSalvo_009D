@@ -15,7 +15,8 @@ export class HomeDocentePage implements OnInit {
   }
 
   mostrarMenu(){
-    this.menuCtrl.open('first');
+    this.menuCtrl.enable(true, 'second')
+    this.menuCtrl.open('second');
   }
 
   nombre = localStorage.getItem('nombre');

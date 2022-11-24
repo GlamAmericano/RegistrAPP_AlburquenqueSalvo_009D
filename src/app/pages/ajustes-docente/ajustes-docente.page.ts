@@ -1,18 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController, MenuController } from '@ionic/angular';
-import { NavController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-ajustes',
-  templateUrl: './ajustes.page.html',
-  styleUrls: ['./ajustes.page.scss'],
+  selector: 'app-ajustes-docente',
+  templateUrl: './ajustes-docente.page.html',
+  styleUrls: ['./ajustes-docente.page.scss'],
 })
-export class AjustesPage implements OnInit {
+export class AjustesDocentePage implements OnInit {
 
-  constructor(private alertCtrl: AlertController, private navCtrl: NavController, private menuCtrl: MenuController) { }
+  constructor(private alertCtrl: AlertController, private navCtrl: NavController) { }
 
   ngOnInit() {
-    this.menuCtrl.enable(false);
   }
 
   async cerrarSesion() {
@@ -41,6 +39,5 @@ export class AjustesPage implements OnInit {
     })
     await alerta.present();
   }
-
 
 }

@@ -21,10 +21,9 @@ h1{
 }
 
 
-ion-thumbnail {
-    --size: 250px;
-    position: relative;
-    bottom: 8px;
-    left: 16px;
-    display: flex;
-  }
+
+ion-button {
+    --background:  #ff9e0d;
+    width: 100%;
+    color: #eee;
+}
