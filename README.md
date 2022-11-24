@@ -17,3 +17,6 @@ Dependencias de la aplicación:
 
 
 - Angular Storage = npm install --save @ionic/storage-angular
+
+
+- Implementación Código QR = npm install angularx-qrcode --save (Aunque sujeta a versión de Angular instalada. Más información: https://www.npmjs.com/package/angularx-qrcode)
