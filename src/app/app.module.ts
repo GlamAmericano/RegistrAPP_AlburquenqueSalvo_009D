@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { Drivers } from '@ionic/storage';
 import { IonicStorageModule } from '@ionic/storage-angular';
 
+import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { IonicStorageModule } from '@ionic/storage-angular';
           IonicModule.forRoot(),
           AppRoutingModule,
           HttpClientModule,
+          QRCodeModule,
           IonicStorageModule.forRoot({
             name: 'mydb',
             driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage]

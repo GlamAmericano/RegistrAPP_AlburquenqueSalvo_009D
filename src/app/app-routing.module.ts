@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { IngresadoDocenteGuard } from './guards/ingresado-docente.guard';
 import { IngresadoGuard } from './guards/ingresado.guard';
 import { NoIngresadoGuard } from './guards/no-ingresado.guard';
 
@@ -33,7 +34,7 @@ const routes: Routes = [
   {
     path: 'generar-qr',
     loadChildren: () => import('./pages/generar-qr/generar-qr.module').then( m => m.GenerarQrPageModule),
-    canActivate: [IngresadoGuard]
+    canActivate: [IngresadoDocenteGuard]
   },
   {
     path: 'escanear-qr',
@@ -73,7 +74,7 @@ const routes: Routes = [
   {
     path: 'home-docente',
     loadChildren: () => import('./pages/home-docente/home-docente.module').then( m => m.HomeDocentePageModule),
-    canActivate: [IngresadoGuard]
+    canActivate: [IngresadoDocenteGuard]
   },
   {
     path: 'mensaje',
@@ -94,6 +95,10 @@ const routes: Routes = [
     path: 'api/:id',
     loadChildren: () => import('./pages/detalles/detalles.module').then( m => m.DetallesPageModule),
     canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'ajustes-docente',
+    loadChildren: () => import('./pages/ajustes-docente/ajustes-docente.module').then( m => m.AjustesDocentePageModule)
   },
 ];
 

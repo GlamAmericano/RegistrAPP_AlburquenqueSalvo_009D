@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-interface Components {
+interface Componentes {
   icon: string;
   nombre: string;
   redirectTo: string;
@@ -15,7 +15,7 @@ interface Components {
 export class AppComponent {
   constructor() {}
 
-  componentes : Components[] = [
+  componentes : Componentes[] = [
     {
       icon: 'home',
       nombre: 'Inicio',
@@ -32,11 +32,37 @@ export class AppComponent {
       redirectTo: 'ajustes'
     },
     {
+      icon: 'scan-outline',
+      nombre: 'Registrar Asistencia',
+      redirectTo: '/escanear-qr'
+    },
+    {
       icon: 'videocam-outline',
       nombre: 'Cine',
       redirectTo: '/api'
+    },
+  ]
+
+  menu_components2 : Componentes[] = [
+    {
+      icon: 'home',
+      nombre: 'Inicio',
+      redirectTo: 'no'
+    },
+    {
+      icon: 'hammer-outline',
+      nombre: 'Ajustes',
+      redirectTo: 'ajustes-docente'
+    },
+    {
+      icon: 'qr-code-outline',
+      nombre: 'Generar QR',
+      redirectTo: 'generar-qr'
     }
   ]
+
+
+  
 
 
 

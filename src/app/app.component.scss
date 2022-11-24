@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+.bg {
+    --background: gray;
+}
+
+
+.menu-items {
+    margin: 0px;
+
+    ion-icon {
+        margin-right: 20px;
+        color: #ff9e0d;
+    }
+
+
+    ion-item {
+        padding-left: 20px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+}
