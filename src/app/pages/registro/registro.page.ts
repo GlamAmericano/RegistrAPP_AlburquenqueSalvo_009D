@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { AlertController, ToastController } from '@ionic/angular';
+import { AlertController, ToastController, NavController } from '@ionic/angular';
 import { RegistroDocenteService, Docente } from '../../services/registro-docente.service';
 
 
@@ -18,11 +18,11 @@ export class RegistroPage implements OnInit {
 
 
 
-  constructor(private alertCtrl: AlertController, private registroService: RegistroDocenteService, private toastCtrl: ToastController, private fb: FormBuilder){
+  constructor(private alertCtrl: AlertController, private registroService: RegistroDocenteService, private navCtrl: NavController, private toastCtrl: ToastController, private fb: FormBuilder){
     this.formularioRegistro = this.fb.group ({
       nombre: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]),
       apellidos: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]),
-      escuela: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(80)]),
+      escuela: new FormControl('', [Validators.required]),
       correo: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z0-9._%+-]+@profesor.duoc+\\.cl$')]),
       password: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(18)])
     })
@@ -56,6 +56,7 @@ export class RegistroPage implements OnInit {
         this.registroService.agregarDocente(this.nuevoDocente).then(dato=>{ 
           this.nuevoDocente = <Docente>{};
           this.showToast('Docente registrado existosamente!');
+          this.navCtrl.navigateRoot('login');
         });
         this.formularioRegistro.reset();
       }
@@ -83,7 +84,8 @@ export class RegistroPage implements OnInit {
   async showToast(msg){
     const toast = await this.toastCtrl.create({
       message: msg,
-      duration: 2000
+      duration: 2000,
+      position: 'top'
     })
     await toast.present();
   }

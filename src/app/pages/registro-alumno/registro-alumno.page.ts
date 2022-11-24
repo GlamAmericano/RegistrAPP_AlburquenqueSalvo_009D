@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { RegistroService, Estudiante } from '../../services/registro.service';
-import { ToastController } from '@ionic/angular';
+import { ToastController, NavController } from '@ionic/angular';
 import {
   FormGroup, FormControl, Validators, FormBuilder
 } from '@angular/forms';
@@ -17,7 +17,7 @@ export class RegistroAlumnoPage implements OnInit {
   estudiantes: Estudiante[] = [];
   nuevoEstudiante: Estudiante = <Estudiante>{};
 
-  constructor(private alertCtrl: AlertController, private registroService: RegistroService, private toastCtrl: ToastController, private fb: FormBuilder){
+  constructor(private alertCtrl: AlertController, private registroService: RegistroService, private toastCtrl: ToastController, private navCtrl: NavController, private fb: FormBuilder){
     this.formularioRegistro = this.fb.group ({
       nombre: new FormControl('', [Validators.required, Validators.minLength(3), Validators.pattern('^[a-zA-Z ]*$')]),
       apellidos: new FormControl('', [Validators.required, Validators.minLength(3), Validators.pattern('^[a-zA-Z ]*$')]),
@@ -56,6 +56,7 @@ export class RegistroAlumnoPage implements OnInit {
         this.registroService.agregarEstudiante(this.nuevoEstudiante).then(dato=>{ 
           this.nuevoEstudiante = <Estudiante>{};
           this.showToast('Estudiante registrado existosamente!');
+          this.navCtrl.navigateRoot('login');
         });
         this.formularioRegistro.reset();
       }
