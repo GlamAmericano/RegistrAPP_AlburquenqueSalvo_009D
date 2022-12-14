@@ -12,9 +12,14 @@
 
   <ion-card class="ion-text-center">
     <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nombre de Asignatura: </ion-label>
+        <ion-input type="text" [(ngModel)]="datos.nombreAsignatura" minlength="3" required></ion-input>
+       </ion-item>
+
        <ion-item>
         <ion-label position="floating">Módulo: </ion-label>
-        <ion-input type="text" [(ngModel)]="datos.nombreAsignatura" minlength="3" required></ion-input>
+        <ion-input type="text" [(ngModel)]="datos.modulo" minlength="3" required></ion-input>
        </ion-item>
 
        <ion-item>

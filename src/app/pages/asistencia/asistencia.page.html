@@ -1,0 +1,26 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button routerLink="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>RegistrAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-list>
+    <ion-item *ngFor="let a of asistencia; let indexArray = index">
+      <ion-label class="ion-text-wrap">
+        <h3> {{a.nombreAsignatura}}</h3>
+        <p> {{a.modulo}} - {{ a.seccion}}</p>
+      </ion-label>
+ 
+      <ion-badge slot="end"> {{ a.fecha }} </ion-badge>
+    </ion-item>
+  </ion-list>
+
+
+  
+</ion-content>

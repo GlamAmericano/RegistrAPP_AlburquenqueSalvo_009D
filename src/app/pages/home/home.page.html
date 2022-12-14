@@ -36,15 +36,20 @@
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Registra tu asistencia</ion-card-title> <br>
-      <img routerLink="/escanear-qr" src="assets/escanearqr.png" />
+      <ion-card-title>Consulta tu asistencia</ion-card-title> <br>
+      <img routerLink="/asistencia" src="assets/asistencia.png" />
     </ion-card-header>
+    <ion-card-content>
+      Consulta el registro de asistencia que has realizado mediante la aplicación
+    </ion-card-content>
   </ion-card>
+
+
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Enviar mensaje</ion-card-title> <br>
-      <img routerLink="/" src="assets/justify.png" />
+      <ion-card-title>Registra tu asistencia</ion-card-title> <br>
+      <img (click)="escanearQR()" src="assets/escanearqr.png" />
     </ion-card-header>
   </ion-card>
 

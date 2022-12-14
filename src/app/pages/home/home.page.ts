@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { RegistroService } from '../../services/registro.service';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import { Iasistencias } from 'src/app/interfaces/iasistencia2.ts';
+import { AsistenciaService } from 'src/app/services/asistencia.service';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +12,10 @@ import { RegistroService } from '../../services/registro.service';
 })
 export class HomePage implements OnInit {
 
+  code: any;
 
 
-  constructor(private menuCtrl: MenuController) {
+  constructor(private menuCtrl: MenuController, private barcodeScanner: BarcodeScanner, private asistenciaService: AsistenciaService) {
     
    }
 
@@ -23,6 +27,16 @@ export class HomePage implements OnInit {
   apellidos = localStorage.getItem('apellidos');
   carrera = localStorage.getItem('carrera');
 
+  fecha = new Date();
+  fechaActual = this.fecha.getDate() + '/' + (this.fecha.getMonth() + 1) + '/' + this.fecha.getFullYear()
+
+  nuevaAsistencia: Iasistencias = {
+    nombreAsignatura: "",
+    modulo: "",
+    seccion: "",
+    fecha: this.fechaActual
+  }
+
 
 
   mostrarMenu(){
@@ -31,6 +45,14 @@ export class HomePage implements OnInit {
 
   }
 
+  escanearQR(){
+    this.barcodeScanner.scan().then(barcodeData => {
+      this.code = barcodeData.text;
+      this.asistenciaService.crearAsistencia(this.nuevaAsistencia).subscribe();
+     }).catch(err => {
+         console.log('Error', err);
+     });
+  }
   
 
 
