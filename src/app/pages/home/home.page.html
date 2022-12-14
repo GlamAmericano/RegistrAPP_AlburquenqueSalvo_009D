@@ -34,13 +34,13 @@
 
   <ion-searchbar placeholder="¿Qué desea hacer?"></ion-searchbar>
 
-  <ion-card>
+  <ion-card routerLink="/asistencia" >
     <ion-card-header>
       <ion-card-title>Consulta tu asistencia</ion-card-title> <br>
-      <img routerLink="/asistencia" src="assets/asistencia.png" />
+      <img  src="assets/asistencia.png" />
     </ion-card-header>
     <ion-card-content>
-      Consulta el registro de asistencia que has realizado mediante la aplicación
+      Consulta el registro de asistencia que has realizado. La asistencia se basa en el uso de la aplicación mediante los escaneos al código QR.
     </ion-card-content>
   </ion-card>
 
@@ -51,6 +51,9 @@
       <ion-card-title>Registra tu asistencia</ion-card-title> <br>
       <img (click)="escanearQR()" src="assets/escanearqr.png" />
     </ion-card-header>
+    <ion-card-content>
+      Escanea el código QR que pondrá tu profesor mediante su perfil para registrar tu asistencia.
+    </ion-card-content>
   </ion-card>
 
 

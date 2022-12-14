@@ -1,3 +1,32 @@
 ion-badge {
     --background: #ff9e0d;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap');
+
+ion-toolbar {
+    --background: #ff9e0d;
+    color: #eee;
+    border: none;
+    padding: 5px;
+}
+
+ion-title {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 25px;
+
+}
+
+.encabezado {
+    
+    margin-top: 20px;
+    margin-left: 10px;
+
+    h2 {
+        font-size: 1.6rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+    }
+
+}
