@@ -1,0 +1,18 @@
+{
+    "asistencia": [
+        {
+            "id": 1,
+            "nombreAsignatura": "Arquitectura de Software",
+            "modulo": "ASY4131",
+            "seccion": "004D",
+            "fecha": "10/12/2022"
+        },
+        {
+            "id": 2,
+            "nombreAsignatura": "Programación de Aplicaciones Móviles",
+            "modulo": "PGY4121",
+            "seccion": "009D",
+            "fecha": "09/12/2022"
+        }
+    ]
+}
