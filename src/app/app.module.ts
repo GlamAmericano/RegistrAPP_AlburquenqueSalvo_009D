@@ -14,6 +14,8 @@ import { IonicStorageModule } from '@ionic/storage-angular';
 
 import { QRCodeModule } from 'angularx-qrcode';
 
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, 
@@ -26,7 +28,7 @@ import { QRCodeModule } from 'angularx-qrcode';
             driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage]
           }),
         ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [ BarcodeScanner, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

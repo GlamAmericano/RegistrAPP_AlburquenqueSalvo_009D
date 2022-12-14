@@ -100,6 +100,10 @@ const routes: Routes = [
     path: 'ajustes-docente',
     loadChildren: () => import('./pages/ajustes-docente/ajustes-docente.module').then( m => m.AjustesDocentePageModule)
   },
+  {
+    path: 'asistencia',
+    loadChildren: () => import('./pages/asistencia/asistencia.module').then( m => m.AsistenciaPageModule)
+  },
 ];
 
 @NgModule({

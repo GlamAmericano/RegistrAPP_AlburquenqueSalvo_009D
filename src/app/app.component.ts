@@ -37,8 +37,13 @@ export class AppComponent {
       redirectTo: '/escanear-qr'
     },
     {
+      icon: 'school-outline',
+      nombre: 'Consultar Asistencia',
+      redirectTo: '/asistencia'
+    },
+    {
       icon: 'videocam-outline',
-      nombre: 'Cine',
+      nombre: 'Cine DUOC',
       redirectTo: '/api'
     },
   ]
