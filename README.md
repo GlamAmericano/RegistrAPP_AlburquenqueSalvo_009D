@@ -20,3 +20,16 @@ Dependencias de la aplicación:
 
 
 - Implementación Código QR = npm install angularx-qrcode --save (Aunque sujeta a versión de Angular instalada. Más información: https://www.npmjs.com/package/angularx-qrcode)
+
+
+- Implementación Scanner (Barcode Scanner) = npm install phonegap-plugin-barcodescanner 
+
+
+- Integrar con Ionic y Capacitor = npm install @ionic-native/barcode-scanner || ionic cap sync
+
+
+- JSON-SERVER = npm install -g json-server
+
+
+- Puesta en marcha Data JSON-SERVER (en directorio data) = json-server --watch asistencia.json --host 0.0.0.0 --port 3300
+
