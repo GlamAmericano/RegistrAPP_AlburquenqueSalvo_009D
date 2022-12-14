@@ -40,7 +40,7 @@ export class RegistroDocenteService {
     })
   }
 
-  //Obtener todos los estudiantes dentro del storage
+  //Obtener todos los docentes dentro del storage
   async getDocente():Promise<Docente[]>{
     return this.storage.get(TEACHERS_KEY);
   }
